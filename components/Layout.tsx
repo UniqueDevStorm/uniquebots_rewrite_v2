@@ -6,8 +6,8 @@ class Layout extends Component {
         return (
             <div>
                 {/*nav area*/}
-                <div className="bg-light fixed-top">
-                    <nav className="navbar py-3 navbar-expand-lg navbar-light fw-bolder container">
+                <div className="bg-dark fixed-top">
+                    <nav className="navbar py-lg-3 navbar-expand-lg navbar-dark fw-bolder container">
                         <div className="container-fluid">
                             <Link href="/">
                                 <a className="navbar-brand" href="/">UNIQUEBOTS</a>
