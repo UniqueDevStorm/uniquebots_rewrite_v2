@@ -25,6 +25,28 @@ class Layout extends Component {
                                         </Link>
                                     </li>
                                 </ul>
+                                <ul className="ms-auto navbar-nav">
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" href="#">
+                                            <img alt="avatar" src="https://cdn.discordapp.com/embed/avatars/0.png" width={24} height={24} style={{
+                                                marginRight: 5,
+                                                borderRadius: '50%'
+                                            }}/>
+                                            Sample#0000
+                                        </a>
+                                        <ul className="dropdown-menu">
+                                            <li>
+                                                <a className="dropdown-item">프로필</a>
+                                            </li>
+                                            <li>
+                                                <hr className="dropdown-divider"/>
+                                            </li>
+                                            <li>
+                                                <a className="dropdown-item">로그아웃</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </nav>
