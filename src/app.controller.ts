@@ -1,14 +1,14 @@
-import {Controller, Get, Render} from '@nestjs/common';
+import { Controller, Get, Render } from "@nestjs/common"
 
 @Controller()
 export class AppController {
   @Get()
-  @Render('Index')
+  @Render("Index")
   public index() {}
 
-  @Render('about')
-  @Get('/about')
+  @Render("about")
+  @Get("/about")
   public about() {
-    return {};
+    return {}
   }
 }
