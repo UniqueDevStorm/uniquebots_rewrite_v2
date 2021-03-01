@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Link from 'next/link'
 
-class Layout extends Component {
+class Layout extends Component<any, any> {
     render() {
         return (
             <div>
