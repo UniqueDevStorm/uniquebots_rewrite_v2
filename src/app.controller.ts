@@ -1,12 +1,10 @@
-import {Controller, Get, Query, Render, Req, Res} from '@nestjs/common';
-import {Response} from 'express'
+import {Controller, Get, Render} from '@nestjs/common';
 
 @Controller()
 export class AppController {
   @Get()
-  public index(@Res() res: Response) {
-    return res.render('index');
-  }
+  @Render('Index')
+  public index() {}
 
   @Render('about')
   @Get('/about')
