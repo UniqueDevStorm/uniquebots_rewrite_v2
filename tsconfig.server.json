@@ -13,7 +13,8 @@
     "allowJs": false,
     "paths": {
       "@styles/*": ["styles/*"],
-      "@components/*": ["components/*"]
+      "@components/*": ["components/*"],
+      "@types/*": ["types/*"]
     },
     "baseUrl": "."
   },
