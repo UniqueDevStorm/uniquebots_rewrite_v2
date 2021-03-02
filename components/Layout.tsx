@@ -3,14 +3,13 @@ import Link from "next/link"
 
 class Layout extends Component<any, any> {
   render() {
-    // const user = {
-    //   id: "299895531701010442",
-    //   avatar: "352a021b71062329b93f919d9c5bca35",
-    //   name:
-    //     "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ루",
-    //   discriminator: "0000",
-    // }
-    const user = undefined
+    const user = {
+      id: "299895531701010442",
+      avatar: "352a021b71062329b93f919d9c5bca35",
+      name:
+        "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ루",
+      discriminator: "0000",
+    }
     return (
       <div>
         {/*nav area*/}
@@ -47,37 +46,39 @@ class Layout extends Component<any, any> {
                   </li>
                 </ul>
                 <ul className="ms-auto navbar-nav">
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      role="button"
-                      href="#"
-                    >
-                      <img
-                        alt="avatar"
-                        src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`}
-                        width={24}
-                        height={24}
-                        style={{
-                          marginRight: 5,
-                          borderRadius: "50%",
-                        }}
-                      />
-                      {`${user.name.slice(0, 10)}..#${user.discriminator}`}
-                    </a>
-                    <ul className="dropdown-menu">
-                      <li>
-                        <a className="dropdown-item">프로필</a>
-                      </li>
-                      <li>
-                        <hr className="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a className="dropdown-item">로그아웃</a>
-                      </li>
-                    </ul>
-                  </li>
+                  {user ? (
+                    <li className="nav-item dropdown">
+                      <a
+                        className="nav-link dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        role="button"
+                        href="#"
+                      >
+                        <img
+                          alt="avatar"
+                          src={`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`}
+                          width={24}
+                          height={24}
+                          style={{
+                            marginRight: 5,
+                            borderRadius: "50%",
+                          }}
+                        />
+                        {`${user.name.slice(0, 10)}..#${user.discriminator}`}
+                      </a>
+                      <ul className="dropdown-menu">
+                        <li>
+                          <a className="dropdown-item">프로필</a>
+                        </li>
+                        <li>
+                          <hr className="dropdown-divider" />
+                        </li>
+                        <li>
+                          <a className="dropdown-item">로그아웃</a>
+                        </li>
+                      </ul>
+                    </li>
+                  ) : null}
                 </ul>
               </div>
             </div>
